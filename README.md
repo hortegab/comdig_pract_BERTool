@@ -1,2 +1,2 @@
 # comdig_pract_BERTool
-Se estudian curvas de BER y SER con diferentes tipos de modulación. Se incluye una herramienta propia de BERTool
+Se realiza un estudio que permtie comprender las ventajas y limitaciones de los diversos tipos de modulación, para lo cual se comienza con el estudio de la eficiencia espectral, sin ruido, donde todo parece ser maravilloso para las modulaciones de mayor orden. Finalmente se pasa al uso de ruido y estudio de BER y SER para llegar a entender las verdaderas posibles aplicaciones. Se incluye una herramienta propia de BERTool
