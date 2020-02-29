@@ -585,7 +585,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(56, 340)</value>
+      <value>(16, 156)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -652,7 +652,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(596, 480)</value>
+      <value>(556, 296)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -684,62 +684,7 @@
     </param>
     <param>
       <key>tipo_mod</key>
-      <value>"QPSK"</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_throttle</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(216, 364)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>blocks_throttle</value>
-    </param>
-    <param>
-      <key>ignoretag</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>samples_per_second</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
+      <value>"SER QPSK"</value>
     </param>
   </block>
   <block>
@@ -766,7 +711,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 324)</value>
+      <value>(336, 140)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -825,7 +770,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(304, 660)</value>
+      <value>(312, 476)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -968,87 +913,21 @@
       <value>Modulación 4PSK</value>
     </param>
   </block>
-  <block>
-    <key>virtual_sink</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(340, 200)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>90</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>vs0</value>
-    </param>
-    <param>
-      <key>stream_id</key>
-      <value>TX1</value>
-    </param>
-  </block>
-  <block>
-    <key>virtual_sink</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(212, 488)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>90</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>vs1</value>
-    </param>
-    <param>
-      <key>stream_id</key>
-      <value>RX1</value>
-    </param>
-  </block>
   <connection>
     <source_block_id>analog_random_source_x</source_block_id>
-    <sink_block_id>blocks_throttle</sink_block_id>
+    <sink_block_id>b_BERTool_Channel_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_random_source_x</source_block_id>
+    <sink_block_id>digital_chunks_to_symbols_xx</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>b_BERTool_Channel_0</source_block_id>
     <sink_block_id>digital_constellation_decoder_cb_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_throttle</source_block_id>
-    <sink_block_id>b_BERTool_Channel_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_throttle</source_block_id>
-    <sink_block_id>digital_chunks_to_symbols_xx</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_throttle</source_block_id>
-    <sink_block_id>vs0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1063,11 +942,5 @@
     <sink_block_id>b_BERTool_Channel_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>2</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_constellation_decoder_cb_0</source_block_id>
-    <sink_block_id>vs1</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
   </connection>
 </flow_graph>
