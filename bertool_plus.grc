@@ -1,946 +1,377 @@
-<?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.13'?>
-<flow_graph>
-  <timestamp>Sat Jul 12 13:50:53 2014</timestamp>
-  <block>
-    <key>options</key>
-    <param>
-      <key>author</key>
-      <value>Homero Ortega Boada</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>2048,2048</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>description</key>
-      <value>Dale un valor a Es/No, corre el flujograma y obten la SER. Puedes sacar tantos valores como para construir una curva de SER</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(8, 0)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
-    </param>
-    <param>
-      <key>hier_block_src_path</key>
-      <value>.:</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>ser_simulation</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>qt_qss_theme</key>
-      <value></value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>run_command</key>
-      <value>{python} -u {filename}</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>run_stop</value>
-    </param>
-    <param>
-      <key>sizing_mode</key>
-      <value>fixed</value>
-    </param>
-    <param>
-      <key>thread_safe_setters</key>
-      <value></value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>SER Simulation</value>
-    </param>
-    <param>
-      <key>placement</key>
-      <value>(0,0)</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(344, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>Bps</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>int(math.log(M,2))</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(672, 69)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>EsN0max</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>20.</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(592, 69)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>EsN0min</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(272, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>M</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>len(MiconstellationObject.points())</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(664, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>MaxCount</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>int(1e7)</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(752, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>MaxErrors</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1000</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_constellation</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const_points</key>
-      <value>digital.constellation_qpsk().points()</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>calcdist</value>
-    </param>
-    <param>
-      <key>dims</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(832, 60)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>MiconstellationObject</value>
-    </param>
-    <param>
-      <key>rot_sym</key>
-      <value>4</value>
-    </param>
-    <param>
-      <key>soft_dec_lut</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>precision</key>
-      <value>8</value>
-    </param>
-    <param>
-      <key>sym_map</key>
-      <value></value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(752, 69)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>N_snr</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>128</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(512, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>Rb</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>Rs*Bps</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(416, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>Rs</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>samp_rate/Sps</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(592, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>Sps</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>1</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1216, 204)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>const</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>digital.constellation_bpsk().points()</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1216, 268)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>const</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>digital.qam_constellation(16).points()</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1216, 332)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>const</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>digital.constellation_qpsk().points()</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_qtgui_check_box</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>false</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1072, 4)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>0,0,1,1</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>run_stop</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>Inicial/Parar</value>
-    </param>
-    <param>
-      <key>true</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>int</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(184, 5)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>100e3</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_random_source_x</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(16, 156)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>analog_random_source_x</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>M</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>num_samps</key>
-      <value>10000000</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>True</value>
-    </param>
-  </block>
-  <block>
-    <key>b_BERTool_Channel</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>EsN0max</key>
-      <value>EsN0max</value>
-    </param>
-    <param>
-      <key>EsN0min</key>
-      <value>EsN0min</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(556, 296)</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>270</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>b_BERTool_Channel_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>N_snr</key>
-      <value>N_snr</value>
-    </param>
-    <param>
-      <key>Rs</key>
-      <value>Rs</value>
-    </param>
-    <param>
-      <key>tipo_mod</key>
-      <value>"SER QPSK"</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_chunks_to_symbols_xx</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>dimension</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(336, 140)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>digital_chunks_to_symbols_xx</value>
-    </param>
-    <param>
-      <key>in_type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>num_ports</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>out_type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>symbol_table</key>
-      <value>MiconstellationObject.points()</value>
-    </param>
-  </block>
-  <block>
-    <key>digital_constellation_decoder_cb</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>constellation</key>
-      <value>MiconstellationObject</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(312, 476)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>digital_constellation_decoder_cb_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>import</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(840, 4)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>import</value>
-    </param>
-    <param>
-      <key>import</key>
-      <value>import math</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1200, 12)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>note_0</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>Modulación BPSK</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1200, 60)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>note_0_0</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>Modulación 16QAM</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1200, 108)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>note_0_1</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>Modulación 4PSK</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>analog_random_source_x</source_block_id>
-    <sink_block_id>b_BERTool_Channel_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_random_source_x</source_block_id>
-    <sink_block_id>digital_chunks_to_symbols_xx</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>b_BERTool_Channel_0</source_block_id>
-    <sink_block_id>digital_constellation_decoder_cb_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_chunks_to_symbols_xx</source_block_id>
-    <sink_block_id>b_BERTool_Channel_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>digital_constellation_decoder_cb_0</source_block_id>
-    <sink_block_id>b_BERTool_Channel_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>2</sink_key>
-  </connection>
-</flow_graph>
+options:
+  parameters:
+    author: Homero Ortega Boada
+    category: Custom
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: Dale un valor a Es/No, corre el flujograma y obten la SER. Puedes
+      sacar tantos valores como para construir una curva de SER
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: ser_simulation
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: run_stop
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: SER Simulation
+    window_size: 2048,2048
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 0]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: Bps
+  id: variable
+  parameters:
+    comment: ''
+    value: int(math.log(M,2))
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 5]
+    rotation: 0
+    state: enabled
+- name: EsN0max
+  id: variable
+  parameters:
+    comment: ''
+    value: '20.'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [672, 69]
+    rotation: 0
+    state: enabled
+- name: EsN0min
+  id: variable
+  parameters:
+    comment: ''
+    value: '0.'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 69]
+    rotation: 0
+    state: enabled
+- name: M
+  id: variable
+  parameters:
+    comment: ''
+    value: len(MiconstellationObject.points())
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [272, 5]
+    rotation: 0
+    state: enabled
+- name: MaxCount
+  id: variable
+  parameters:
+    comment: ''
+    value: int(1e7)
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [664, 5]
+    rotation: 0
+    state: enabled
+- name: MaxErrors
+  id: variable
+  parameters:
+    comment: ''
+    value: '1000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 5]
+    rotation: 0
+    state: enabled
+- name: MiconstellationObject
+  id: variable_constellation
+  parameters:
+    comment: ''
+    const_points: digital.constellation_qpsk().points()
+    dims: '1'
+    precision: '8'
+    rot_sym: '4'
+    soft_dec_lut: None
+    sym_map: (0,1,2,3)
+    type: calcdist
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [832, 60]
+    rotation: 0
+    state: enabled
+- name: N_snr
+  id: variable
+  parameters:
+    comment: ''
+    value: '128'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [752, 69]
+    rotation: 0
+    state: enabled
+- name: Rb
+  id: variable
+  parameters:
+    comment: ''
+    value: Rs*Bps
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [512, 5]
+    rotation: 0
+    state: enabled
+- name: Rs
+  id: variable
+  parameters:
+    comment: ''
+    value: samp_rate/Sps
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [416, 5]
+    rotation: 0
+    state: enabled
+- name: Sps
+  id: variable
+  parameters:
+    comment: ''
+    value: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [592, 5]
+    rotation: 0
+    state: enabled
+- name: const
+  id: variable
+  parameters:
+    comment: ''
+    value: digital.constellation_bpsk().points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 204]
+    rotation: 0
+    state: disabled
+- name: const
+  id: variable
+  parameters:
+    comment: ''
+    value: digital.qam_constellation(16).points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 268]
+    rotation: 0
+    state: disabled
+- name: const
+  id: variable
+  parameters:
+    comment: ''
+    value: digital.constellation_qpsk().points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1216, 332]
+    rotation: 0
+    state: disabled
+- name: run_stop
+  id: variable_qtgui_check_box
+  parameters:
+    comment: ''
+    'false': 'False'
+    gui_hint: 0,0,1,1
+    label: Inicial/Parar
+    'true': 'True'
+    type: int
+    value: 'True'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1072, 4]
+    rotation: 180
+    state: enabled
+- name: samp_rate
+  id: variable
+  parameters:
+    comment: ''
+    value: 100e3
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [184, 5]
+    rotation: 0
+    state: enabled
+- name: analog_random_source_x
+  id: analog_random_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    max: M
+    maxoutbuf: '0'
+    min: '0'
+    minoutbuf: '0'
+    num_samps: '10000000'
+    repeat: 'True'
+    type: byte
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 156]
+    rotation: 0
+    state: enabled
+- name: b_BERTool_Channel_0
+  id: b_BERTool_Channel
+  parameters:
+    EsN0max: EsN0max
+    EsN0min: EsN0min
+    N_snr: N_snr
+    Rs: Rs
+    affinity: ''
+    alias: ''
+    comment: ''
+    gui_hint: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    tipo_mod: '"SER QPSK"'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [556, 296]
+    rotation: 270
+    state: enabled
+- name: digital_chunks_to_symbols_xx
+  id: digital_chunks_to_symbols_xx
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    dimension: '1'
+    in_type: byte
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    num_ports: '1'
+    out_type: complex
+    symbol_table: MiconstellationObject.points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [336, 140]
+    rotation: 0
+    state: enabled
+- name: digital_constellation_decoder_cb_0
+  id: digital_constellation_decoder_cb
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    constellation: MiconstellationObject
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [312, 476]
+    rotation: 180
+    state: enabled
+- name: import
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: import math
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [840, 4]
+    rotation: 0
+    state: enabled
+- name: note_0
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: "Modulaci\xF3n BPSK"
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1200, 12]
+    rotation: 0
+    state: enabled
+- name: note_0_0
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: "Modulaci\xF3n 16QAM"
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1200, 60]
+    rotation: 0
+    state: enabled
+- name: note_0_1
+  id: note
+  parameters:
+    alias: ''
+    comment: ''
+    note: "Modulaci\xF3n 4PSK"
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1200, 108]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_random_source_x, '0', b_BERTool_Channel_0, '1']
+- [analog_random_source_x, '0', digital_chunks_to_symbols_xx, '0']
+- [b_BERTool_Channel_0, '0', digital_constellation_decoder_cb_0, '0']
+- [digital_chunks_to_symbols_xx, '0', b_BERTool_Channel_0, '0']
+- [digital_constellation_decoder_cb_0, '0', b_BERTool_Channel_0, '2']
+
+metadata:
+  file_format: 1
