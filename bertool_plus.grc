@@ -45,6 +45,18 @@ blocks:
     coordinate: [344, 5]
     rotation: 0
     state: enabled
+- name: Constelacion
+  id: variable
+  parameters:
+    comment: ''
+    value: digital.constellation_8psk().points()
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1017, 115]
+    rotation: 0
+    state: enabled
 - name: EsN0max
   id: variable
   parameters:
@@ -73,7 +85,7 @@ blocks:
   id: variable
   parameters:
     comment: ''
-    value: len(MiconstellationObject.points())
+    value: len(Constelacion)
   states:
     bus_sink: false
     bus_source: false
@@ -103,24 +115,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [752, 5]
-    rotation: 0
-    state: enabled
-- name: MiconstellationObject
-  id: variable_constellation
-  parameters:
-    comment: ''
-    const_points: digital.constellation_qpsk().points()
-    dims: '1'
-    precision: '8'
-    rot_sym: '4'
-    soft_dec_lut: None
-    sym_map: (0,1,2,3)
-    type: calcdist
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [832, 60]
     rotation: 0
     state: enabled
 - name: N_snr
@@ -253,7 +247,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [16, 156]
+    coordinate: [18, 131]
     rotation: 0
     state: enabled
 - name: b_BERTool_Channel_0
@@ -274,45 +268,41 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [556, 296]
+    coordinate: [694, 238]
     rotation: 270
     state: enabled
-- name: digital_chunks_to_symbols_xx
-  id: digital_chunks_to_symbols_xx
+- name: b_demod_constelacion_cb_0
+  id: b_demod_constelacion_cb
   parameters:
+    Constelacion: Constelacion
     affinity: ''
     alias: ''
     comment: ''
-    dimension: '1'
-    in_type: byte
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    num_ports: '1'
-    out_type: complex
-    symbol_table: MiconstellationObject.points()
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [336, 193]
-    rotation: 0
-    state: enabled
-- name: digital_constellation_decoder_cb_0
-  id: digital_constellation_decoder_cb
-  parameters:
-    affinity: ''
-    alias: ''
-    comment: ''
-    constellation: MiconstellationObject
     maxoutbuf: '0'
     minoutbuf: '0'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [308, 525]
+    coordinate: [343, 475]
     rotation: 180
-    state: enabled
+    state: true
+- name: b_mod_constelacion_cb_0
+  id: b_mod_constelacion_cb
+  parameters:
+    Constelacion: Constelacion
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [341, 230]
+    rotation: 0
+    state: true
 - name: import
   id: import
   parameters:
@@ -324,6 +314,19 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [840, 4]
+    rotation: 0
+    state: enabled
+- name: import_0
+  id: import
+  parameters:
+    alias: ''
+    comment: ''
+    imports: from gnuradio import digital
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [914, 124]
     rotation: 0
     state: enabled
 - name: note_0
@@ -368,10 +371,10 @@ blocks:
 
 connections:
 - [analog_random_source_x, '0', b_BERTool_Channel_0, '1']
-- [analog_random_source_x, '0', digital_chunks_to_symbols_xx, '0']
-- [b_BERTool_Channel_0, '0', digital_constellation_decoder_cb_0, '0']
-- [digital_chunks_to_symbols_xx, '0', b_BERTool_Channel_0, '0']
-- [digital_constellation_decoder_cb_0, '0', b_BERTool_Channel_0, '2']
+- [analog_random_source_x, '0', b_mod_constelacion_cb_0, '0']
+- [b_BERTool_Channel_0, '0', b_demod_constelacion_cb_0, '0']
+- [b_demod_constelacion_cb_0, '0', b_BERTool_Channel_0, '2']
+- [b_mod_constelacion_cb_0, '0', b_BERTool_Channel_0, '0']
 
 metadata:
   file_format: 1
